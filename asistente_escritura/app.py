@@ -61,7 +61,7 @@ if api_key:
             if tema:
                 with st.spinner("Escribiendo..."):
                     try:
-                        model = genai.GenerativeModel('gemini-1.5-pro')
+                        model = genai.GenerativeModel('gemini-3.6-flash')
                         prompt = f"Escribe un texto sobre: '{tema}'. El tono del texto debe ser {tono.lower()}."
                         response = model.generate_content(prompt)
                         st.subheader("Texto Generado:")
